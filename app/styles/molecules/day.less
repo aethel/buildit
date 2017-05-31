@@ -1,0 +1,47 @@
+.day {
+  flex: 1 0 17%;
+  padding:0.5rem;
+  background: @light;
+  transform: scale(1);
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  z-index: 1;
+  @media screen and (min-width: 600px) and (max-width: 1000px) {
+      flex: 1 0 10%;
+  }
+
+  @media screen and (min-width: 1000px) {
+      flex: 1 0 11%;
+  }
+
+  @media screen and (min-width: 1200px) {
+      flex: 1 0 9rem;
+  }
+
+  &:nth-child(n+1):nth-child(-n+8),
+  &:nth-child(n+17):nth-child(-n+24),
+  &:nth-child(n+33):nth-child(-n+40)
+  {
+    background: @offwhite;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    box-shadow:  0 0 0.5rem fadeout(@dark,75%);
+    transition: all 0.25s ease-in-out;
+    z-index: 2
+    ;
+  }
+}
+
+.day__temp,
+.day__date,
+.day__description,
+.day__humidity {
+  margin: 0 0 0.25rem;
+}
+
+.day__date {
+  font-weight: @boldWeight;
+}

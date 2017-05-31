@@ -1,0 +1,229 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 62.5%;
+  line-height: 1;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  padding: 1rem;
+}
+
+body * {
+  box-sizing: content-box;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin: 0 0 2rem 0;
+}
+
+.day {
+  flex: 1 0 17%;
+  padding: 0.5rem;
+  background: #fff;
+  transform: scale(1);
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .day {
+    flex: 1 0 10%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .day {
+    flex: 1 0 11%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .day {
+    flex: 1 0 9rem;
+  }
+}
+
+.day:nth-child(n+1):nth-child(-n+8),
+.day:nth-child(n+17):nth-child(-n+24),
+.day:nth-child(n+33):nth-child(-n+40) {
+  background: #fffbe4;
+}
+
+.day:hover,
+.day:focus {
+  transform: scale(1.1);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease-in-out;
+  z-index: 2;
+}
+
+.day__temp,
+.day__date,
+.day__description,
+.day__humidity {
+  margin: 0 0 0.25rem;
+}
+
+.day__date {
+  font-weight: 900;
+}
+
+.forecast-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1200px) {
+  .forecast-list {
+    width: 1350px;
+    margin: 0 auto;
+  }
+}
